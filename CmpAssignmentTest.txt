@@ -1,0 +1,31 @@
+
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CmpAssignmentTest {
+
+    CmpAssignment cmpAssignment = new CmpAssignment();
+
+    @Test
+    public void testIsPrime() {
+        assertTrue(cmpAssignment.isPrime(2));
+        assertTrue(cmpAssignment.isPrime(3));
+        assertTrue(cmpAssignment.isPrime(5));
+        assertTrue(cmpAssignment.isPrime(7));
+
+        assertFalse(cmpAssignment.isPrime(4));
+        assertFalse(cmpAssignment.isPrime(6));
+        assertFalse(cmpAssignment.isPrime(8));
+        assertFalse(cmpAssignment.isPrime(1));
+    }
+
+    @Test
+    public void testIsPalindrome() {
+        assertTrue(cmpAssignment.isPalindrome("Bobo"));
+        assertTrue(cmpAssignment.isPalindrome("Jojo"));
+
+        assertFalse(cmpAssignment.isPalindrome("Nengak"));
+        assertFalse(cmpAssignment.isPalindrome("Rose"));
+    }
+}
